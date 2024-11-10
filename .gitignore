@@ -1,0 +1,104 @@
+# Compiled output
+/dist
+/build
+/node_modules
+
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Dependency directories
+jspm_packages/
+.eslintcache
+/.pnp
+.pnp.js
+.pnp.cjs
+
+# Testing
+/coverage
+/.nyc_output
+
+# Environment variables
+.env
+.env.*.local
+.env.local
+
+# IDEs and editors
+/.idea
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.project
+.classpath
+.settings/
+*.launch
+*.sublime-workspace
+.c9/
+
+# Temporary files
+.temp
+.tmp
+*.swp
+*.bak
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Diagnostic reports
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Yarn & NPM
+.yarn-integrity
+node_modules/
+
+# MySQL data directory
+.mysql_data/
+
+# Optional npm cache directory
+.npm/
+
+# Jest
+/jest
+
+# TypeScript
+/*.tsbuildinfo
+
+# Next.js
+.next/
+
+# Parcel-bundler
+.cache
+.parcel-cache
+
+# Serverless directories
+.serverless/
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# Minified JavaScript files
+*.min.js

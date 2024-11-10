@@ -1,0 +1,28 @@
+services:
+  api:
+    image: "node:${NODE_VERSION}"
+    command: "npm run start:dev"
+    user: root
+    working_dir: /home/node/nest
+    environment:
+      - PUERTO_NESTJS=${NESTJS_PORT}
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS_ROOT}
+      - DB_NAME=${DB_NAME}
+    ports:
+      - "5001:${NESTJS_PORT}"
+    volumes:
+      - .:/home/node/nest
+
+  db:
+    image: "mysql:${DB_VERSION}"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASS_ROOT}
+      MYSQL_DATABASE: ${DB_NAME} 
+    volumes:
+      - .mysql_data:/var/lib/mysql
+      - ./database/electrorent.sql:/docker-entrypoint-initdb.d/electrorent.sql
+    ports:
+      - "5002:${DB_PORT}"
